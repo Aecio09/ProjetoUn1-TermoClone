@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onMount, onDestroy } from 'svelte';
     import Key from "./teclas.svelte";
     import { adv, borda, cores, fim, info, palavra } from "../testes de codigo";
 
@@ -47,7 +48,6 @@
                 novaCor[prevtentativa][i] = "errado";
             }
         }
-        
 
         cores.set(novaCor);
 
@@ -76,7 +76,26 @@
         }
     }
 
-    // Função para obter o estado de cada tecla
+    // Função para lidar com pressionamento de teclas físicas
+    function handleKeydown(event: KeyboardEvent) {
+        const key = event.key.toUpperCase();
+        if (key === "ENTER") {
+            keypress("ENTER");
+        } else if (key === "BACKSPACE") {
+            keypress("DEL");
+        } else if (/^[A-Z]$/.test(key)) {
+            keypress(key); // Trata letras do alfabeto
+        }
+    }
+
+    // Adicionar e remover o listener global
+    onMount(() => {
+        window.addEventListener("keydown", handleKeydown);
+    });
+
+    onDestroy(() => {
+        window.removeEventListener("keydown", handleKeydown);
+    });
     function getKeyState(char: string) {
         for (let tentativa = 0; tentativa < $cores.length; tentativa++) {
             for (let i = 0; i < $cores[tentativa].length; i++) {
