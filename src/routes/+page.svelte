@@ -26,7 +26,7 @@
         color: aliceblue;
         border: 2px solid black;
         font-size: 4em;
-        left: 25px;
+        left: 0px;
         display: block;
         margin-left: 800px;
         margin-right: 800px;
