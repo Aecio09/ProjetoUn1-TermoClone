@@ -36,6 +36,7 @@
         border-radius: 0.2em;
         line-height: 2;
         position: relative;
+        background-color: #1C1C1C;
     }
     .play::before {
   content: '';
