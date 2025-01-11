@@ -11,8 +11,9 @@
     </ul>
 </div>
 
+<a href="/Eggs">
 <img src="ifpe.png" alt=""/>
-
+</a>
 
 <a class="menu__link" href="/">BACK</a>
 
