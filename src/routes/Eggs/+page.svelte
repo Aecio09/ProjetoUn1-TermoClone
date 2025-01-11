@@ -18,7 +18,7 @@
         if (!isJumping && !gameOver) {
             isJumping = true;
             let upInterval = setInterval(() => {
-                if (dinoTop >= 140) { // Altura máxima do salto
+                if (dinoTop >= 100) { // Altura máxima do salto
                     clearInterval(upInterval);
                     let downInterval = setInterval(() => {
                         if (dinoTop <= 0) { // Retorna ao chão
@@ -26,11 +26,11 @@
                             isJumping = false;
                             contar(); // Chama a função contar quando o pulo é bem-sucedido
                         } else {
-                            dinoTop -= 5; // Descendo
-                        }
+                            dinoTop -= 7; // Descendo
+                        } 
                     }, 20);
-                } else {
-                    dinoTop += 5; // Subindo
+                } else {  
+                    dinoTop += 7; // Subindo
                 }
             }, 20);
         }
@@ -129,7 +129,7 @@
     };
 </script>
 
-<nav>Termo</nav>
+<nav>DINOSSAURO</nav>
 
 
 <a class="menu__link" href="/">BACK</a>
