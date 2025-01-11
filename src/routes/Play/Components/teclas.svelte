@@ -30,4 +30,12 @@
         border: 1px solid black;
 
     }
+    .correto {
+        background-color: #0c6834;
+        border: 1px solid black;
+    }
+    .quase {
+        background-color: #ff8c00;
+        border: 1px solid black;
+    }
 </style>

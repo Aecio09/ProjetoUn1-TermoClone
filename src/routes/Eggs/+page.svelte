@@ -11,14 +11,14 @@
     let jumpCounter = 0; // Contador de pulos bem-sucedidos
     let contador = 0; // Contador de saltos bem-sucedidos
     let cactusSpeed = 20; // Velocidade inicial do cacto
-    let stoneSpeed = 20; // Velocidade da pedra
+    let stoneSpeed = 20; // Velocidade inicial da pedra
 
     // Função para o pulo
     const jump = () => {
         if (!isJumping && !gameOver) {
             isJumping = true;
             let upInterval = setInterval(() => {
-                if (dinoTop >= 100) { // Altura máxima do salto
+                if (dinoTop >= 140) { // Altura máxima do salto
                     clearInterval(upInterval);
                     let downInterval = setInterval(() => {
                         if (dinoTop <= 0) { // Retorna ao chão

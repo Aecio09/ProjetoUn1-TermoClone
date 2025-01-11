@@ -17,7 +17,7 @@
         }));
 
         borda.update((prevborda) => {
-            let novaborda = prevborda;
+            let novaborda: any = prevborda;
             novaborda[$info.Tentativa][$info.Char] = "";
             return novaborda;
         });
@@ -40,12 +40,13 @@
             let char = $borda[prevtentativa][i].toUpperCase();
             adv.update((prevchars) => prevchars + char);
 
+            // Verificar e atualizar estado da tecla
             if ($palavra[i].toUpperCase() === char) {
-                novaCor[prevtentativa][i] = "correto";
-            } else if ($palavra.toUpperCase().includes(char)) {
-                novaCor[prevtentativa][i] = "quase";
-            } else {
-                novaCor[prevtentativa][i] = "errado";
+                novaCor[prevtentativa][i] = "correto"; // Prioridade mais alta
+            } else if ($palavra.toUpperCase().includes(char) && novaCor[prevtentativa][i] !== "correto") {
+                novaCor[prevtentativa][i] = "quase"; // Atualizar para "quase" se não for "correto"
+            } else if (novaCor[prevtentativa][i] !== "correto" && novaCor[prevtentativa][i] !== "quase") {
+                novaCor[prevtentativa][i] = "errado"; // Atualizar apenas se não for "correto" ou "quase"
             }
         }
 
@@ -69,7 +70,7 @@
             if (Char === 5) return;
 
             borda.update((prevborda) => {
-                let novaborda = prevborda;
+                let novaborda: any = prevborda;
                 novaborda[$info.Tentativa][$info.Char++] = char.toUpperCase();
                 return novaborda;
             });
@@ -96,15 +97,21 @@
     onDestroy(() => {
         window.removeEventListener("keydown", handleKeydown);
     });
+
+    // Função para determinar o estado de uma tecla
     function getKeyState(char: string) {
+        let highestState = ""; // Variável para armazenar o estado mais forte da tecla
         for (let tentativa = 0; tentativa < $cores.length; tentativa++) {
             for (let i = 0; i < $cores[tentativa].length; i++) {
                 if ($borda[tentativa][i].toUpperCase() === char.toUpperCase()) {
-                    return $cores[tentativa][i]; // Retorna "correto", "quase" ou "errado"
+                    const currentState = $cores[tentativa][i];
+                    if (currentState === "correto") return "correto"; // Estado mais forte
+                    if (currentState === "quase") highestState = "quase"; // Atualizar se o estado for "quase"
+                    if (!highestState) highestState = "errado"; // Atualizar para "errado" apenas se nenhum estado mais forte foi encontrado
                 }
             }
         }
-        return ""; // Sem estado definido
+        return highestState; // Retorna o estado mais relevante
     }
 </script>
 
