@@ -3,7 +3,7 @@ import { palavra, adv, info, cores, criarGrid, borda, fim } from "../testes de c
 
 function jogarnovamente() {
 
-    let listapalavras : string = [
+    let listapalavras = [
   'abaco', 'batia', 'calor', 'dolar', 'elise', 'fazer', 'girar', 'haver', 'jogar',
    'lados', 'manto', 'nuvem', 'olhos', 'poder', 'quase', 'raiar', 'saber', 'tarde', 'viver', 'lazer', 'zebra', 'caixa', 'banco', 'letra', 'norte', 'amigo', 'grupo',
   'gente', 'navio', 'corte', 'quase', 'vazio', 'temer', 'poder', 'clima', 'jogar', 'visto',

@@ -35,18 +35,27 @@
 
         let prevtentativa = $info.Tentativa - 1;
         let novaCor: any = $cores;
+        let CharDuplos = new Set()
 
         for (let i = 0; i < 5; i++) {
-            let char = $borda[prevtentativa][i].toUpperCase();
-            adv.update((prevchars) => prevchars + char);
+            let char = $borda[prevtentativa][i].toUpperCase()
+            adv.update((prevchars) => prevchars + char)
 
             // Verificar e atualizar estado da tecla
             if ($palavra[i].toUpperCase() === char) {
-                novaCor[prevtentativa][i] = "correto"; // Prioridade mais alta
+                novaCor[prevtentativa][i] = "correto" // Prioridade mais alta
             } else if ($palavra.toUpperCase().includes(char) && novaCor[prevtentativa][i] !== "correto") {
-                novaCor[prevtentativa][i] = "quase"; // Atualizar para "quase" se não for "correto"
-            } else if (novaCor[prevtentativa][i] !== "correto" && novaCor[prevtentativa][i] !== "quase") {
-                novaCor[prevtentativa][i] = "errado"; // Atualizar apenas se não for "correto" ou "quase"
+
+                if(!CharDuplos.has(char)) { // impede de dois quadrados iguais ficarem laranaja e atualiza para quase
+                     novaCor[prevtentativa][i] = "quase"
+                     CharDuplos.add(char)
+                }
+            }
+            
+            
+            
+            else if (novaCor[prevtentativa][i] !== "correto" && novaCor[prevtentativa][i] !== "quase") {
+                novaCor[prevtentativa][i] = "errado" // Atualizar apenas se não for "correto" ou "quase"
             }
         }
 
