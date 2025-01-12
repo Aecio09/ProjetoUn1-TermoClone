@@ -18,7 +18,7 @@
         if (!isJumping && !gameOver) {
             isJumping = true;
             let upInterval = setInterval(() => {
-                if (dinoTop >= 100) { // Altura máxima do salto
+                if (dinoTop >= 130) { // Altura máxima do salto
                     clearInterval(upInterval);
                     let downInterval = setInterval(() => {
                         if (dinoTop <= 0) { // Retorna ao chão

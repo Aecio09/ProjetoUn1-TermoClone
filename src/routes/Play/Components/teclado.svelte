@@ -52,11 +52,14 @@
 
         cores.set(novaCor);
 
-        if ($adv === $palavra.toUpperCase() || prevtentativa === 5) {
-            fim.set(true);
-        } else {
-            adv.set("");
-        }
+        setTimeout(() => {
+    if ($adv === $palavra.toUpperCase() || prevtentativa === 5) {
+        fim.set(true);
+    } else {
+        adv.set("");
+    }
+}, 2000);
+
     }
 
     // Função para gerenciar teclas individuais
