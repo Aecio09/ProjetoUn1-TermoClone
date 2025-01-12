@@ -36,6 +36,6 @@
         background-color: #292929;
     }
     .errado2 {
-        background-color: #640b0b;
+        background-color: #9c0000;
     }
 </style>

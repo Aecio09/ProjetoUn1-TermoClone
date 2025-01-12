@@ -26,7 +26,7 @@ function seleRandom () {
     return palavra[random]
 }
 function IniciarJogo () {
-time = 30
+time = 60
 entrada = ""
 palavraAtual = seleRandom()
 ativo = true
@@ -49,7 +49,7 @@ function checkEntrada (){
         score++
         entrada = ""
         palavraAtual = seleRandom()
-        time += 3
+        time += 0
     }
 }
 </script>
