@@ -50,12 +50,21 @@
                      novaCor[prevtentativa][i] = "quase"
                      CharDuplos.add(char)
                 }
-            }
-            
-            
-            
+            } 
             else if (novaCor[prevtentativa][i] !== "correto" && novaCor[prevtentativa][i] !== "quase") {
                 novaCor[prevtentativa][i] = "errado" // Atualizar apenas se não for "correto" ou "quase"
+            }
+            if (prevtentativa == 5){ // fica vermelho caso a palavra esteja errado em sua tentativa final
+                if ($adv === $palavra.toUpperCase()) {
+                    for (let i = 0; i < 5; i++) {
+                        novaCor[prevtentativa][i] = "correto"
+                    }
+                }
+                else {
+                    for (let i = 0; i < 5; i++) {
+                        novaCor[prevtentativa][i] = "errado2"
+                    }
+                }
             }
         }
 
