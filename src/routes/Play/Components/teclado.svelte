@@ -49,6 +49,8 @@
                 if(!CharDuplos.has(char)) { // impede de dois quadrados iguais ficarem laranaja e atualiza para quase
                      novaCor[prevtentativa][i] = "quase"
                      CharDuplos.add(char)
+                }else {
+                    novaCor[prevtentativa][i] = "errado"
                 }
             } 
             else if (novaCor[prevtentativa][i] !== "correto" && novaCor[prevtentativa][i] !== "quase") {
