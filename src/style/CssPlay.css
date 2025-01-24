@@ -18,7 +18,7 @@
 .celulas{
     width: 70px; height: 70px;
     color: white;
-    background-color: #1C1C1C;
+    background-color: #111111;
     margin: 4px;
     display: flex;
     align-items: center;
@@ -28,6 +28,9 @@
     transition: background-color .7s;
     border: 1px solid black;
 
+}
+.celulas:hover {
+    background-color: #292929;
 }
 .correto{
     background-color: #0c6834;

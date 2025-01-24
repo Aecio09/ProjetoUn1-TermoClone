@@ -1,5 +1,5 @@
 nav {
-    background-color: #1C1C1C;
+    background-color: #111111;
     color: aliceblue;
     font-weight: bold;
     padding: 15px;
@@ -24,7 +24,7 @@ nav {
     border-radius: 0.2em;
     line-height: 2;
     position: relative;
-    background-color: #1C1C1C;
+    background-color: #111111;
 }
 .play::before {
 content: '';

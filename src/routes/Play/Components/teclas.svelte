@@ -10,7 +10,7 @@
 
 <style>
     .key {
-        background-color: #1C1C1C;
+        background-color: #111111;
         color: whitesmoke;
         padding: 20px 18px;
         margin: 4px 3px;

@@ -5,7 +5,6 @@
 <nav>LETRIX</nav>
 
 <div class="titulo">
-    <h3>ALUNOS</h3>
 </div>
 
 <div class="alunos">
