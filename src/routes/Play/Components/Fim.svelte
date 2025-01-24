@@ -1,7 +1,7 @@
 <script lang="ts">
 import { palavra, adv, info, cores, criarGrid, borda, fim } from "../testes de codigo";
 import { listapalavrass } from "../testes de codigo";
-import "/arquivos temporarios/testept2/src/style/FimDoJogo.css"
+import "../../../style/FimDoJogo.css"
 
 function jogarnovamente() {
 

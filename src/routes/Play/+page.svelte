@@ -4,7 +4,7 @@
     import { fim } from "./testes de codigo";
     import Fim from "./Components/Fim.svelte";
     import { fade } from "svelte/transition";
-    import "/arquivos temporarios/testept2/src/style/Paginas.css"
+    import "../../style/Paginas.css"
 </script>
 
 

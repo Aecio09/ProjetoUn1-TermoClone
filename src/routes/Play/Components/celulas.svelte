@@ -1,6 +1,6 @@
 <script lang="ts">
     import { borda, cores } from "../testes de codigo";
-    import "/arquivos temporarios/testept2/src/style/CssPlay.css"
+    import "../../../style/CssPlay.css"
     export let x
     export let y
     $: letras = $borda[y][x]

@@ -2,7 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import Key from "./teclas.svelte";
     import { adv, borda, cores, fim, info, palavra } from "../testes de codigo";
-    import "/arquivos temporarios/testept2/src/style/CssPlay.css"
+    import "../../../style/CssPlay.css"
 
     const linha1 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
     const linha2 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];

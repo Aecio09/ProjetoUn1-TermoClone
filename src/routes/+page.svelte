@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "/arquivos temporarios/testept2/src/style/Paginas.css"
+  import "../style/Paginas.css"
 </script>
 
 

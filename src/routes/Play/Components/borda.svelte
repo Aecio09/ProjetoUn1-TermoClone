@@ -1,7 +1,7 @@
 <script lang="ts">
     import { borda } from "../testes de codigo"
     import Celulas from "./celulas.svelte";
-    import "/arquivos temporarios/testept2/src/style/CssPlay.css"
+    import "../../../style/CssPlay.css"
 </script>
 
 <div class="game">
