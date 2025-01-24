@@ -4,14 +4,17 @@
 
 <nav>LETRIX</nav>
 
+<div class="titulo">
+    <h3>ALUNOS</h3>
+</div>
+
 <div class="alunos">
-    <h2>ALUNOS:</h2>
     <ul>
-        <li>Aécio barbosa </li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
+        <li>Aécio Barbosa</li>
+        <li>Arthur Pontes</li>
+        <li>Cristiano Caldas</li>
+        <li>João Henrique</li>
+        <li>Matheus Silva</li>
     </ul>
 </div>
 
