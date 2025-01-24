@@ -2,6 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import Key from "./teclas.svelte";
     import { adv, borda, cores, fim, info, palavra } from "../testes de codigo";
+    import "/arquivos temporarios/testept2/src/style/CssPlay.css"
 
     const linha1 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
     const linha2 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
@@ -157,19 +158,3 @@
         {/each}
     </div>
 </div>
-
-<style>
-    .teclado {
-        position: fixed;
-        width: fit-content;
-        bottom: 20px;
-        left: 50%;
-        transform: translate(-50%, 0%);
-    }
-
-    .linha {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>

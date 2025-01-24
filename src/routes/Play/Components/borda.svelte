@@ -1,6 +1,7 @@
 <script lang="ts">
     import { borda } from "../testes de codigo"
     import Celulas from "./celulas.svelte";
+    import "/arquivos temporarios/testept2/src/style/CssPlay.css"
 </script>
 
 <div class="game">
@@ -12,13 +13,3 @@
         </div>
     {/each}
 </div>
-
-<style>
-    .game{
-        margin: 50px auto;
-        width: fit-content;
-    }
-    .linhas{
-        display: flex;
-    }
-</style>

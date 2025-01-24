@@ -1,0 +1,60 @@
+strong{
+    font-weight: 900;
+}
+h3{
+    font-size: 2em;
+    color: aliceblue;
+}
+button {
+    background-color: #1C1C1C;
+    color: aliceblue;
+    margin-top: 20px;
+    padding: 20px 50px;
+    cursor: pointer;
+    border: 5em;
+    border-color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 0.2em;
+}
+button:hover {
+animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+0% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+
+20% {
+-webkit-transform: translate(-2px, 2px);
+transform: translate(-2px, 2px);
+}
+
+40% {
+-webkit-transform: translate(-2px, -2px);
+transform: translate(-2px, -2px);
+}
+
+60% {
+-webkit-transform: translate(2px, 2px);
+transform: translate(2px, 2px);
+}
+
+80% {
+-webkit-transform: translate(2px, -2px);
+transform: translate(2px, -2px);
+}
+
+100% {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+}
+
+.center {
+    margin: 20px auto;
+    width: fit-content;
+    text-align: center;
+}
