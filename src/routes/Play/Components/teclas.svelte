@@ -21,7 +21,7 @@
     }
 
     .key:hover {
-        background-color: #292929;
+        background-color: black;
     }
     
 

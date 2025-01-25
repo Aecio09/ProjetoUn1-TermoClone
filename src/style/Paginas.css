@@ -6,8 +6,8 @@ nav {
     font-size: 5em;
     text-align: center;
     margin-top: -20px;
-    margin-left: -0px;
-    margin-right: -0px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 /* primeira paginas e tal */
 .container {
@@ -163,28 +163,13 @@ a {
   display: flex;
   justify-content: center;
   height: 10vh; /* Altura da tela inteira */
-  margin: -8px; /* Remove margens padrão */
+  margin: -1px; /* Remove margens padrão */
   color: aliceblue;
   font-size: 2em;
-}
-.titulo {
-  display: flex;
-  justify-content: center;
-  height: 10vh;
-  font-size: 3em;
-}
-img {
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: flex-end; /* Alinha na parte inferior */
 }
 a img {
   position: absolute;
   top: 35%; /* Ajuste para a posição desejada */
   left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-50%); /* Garante centralização perfeita */
-  max-width: 100%;
-  height: auto;
 }
