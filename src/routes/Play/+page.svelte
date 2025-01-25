@@ -21,4 +21,7 @@
     {/if}
 </main>
 
-<a class="menu__link" href="/">BACK</a>
+<a class="menu__link" href="/">
+    <span class="arrow"></span>
+    BACK
+</a>

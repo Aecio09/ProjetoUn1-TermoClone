@@ -2,12 +2,12 @@ nav {
     background-color: #111111;
     color: aliceblue;
     font-weight: bold;
-    padding: 15px;
-    font-size: 4em;
+    padding: 20px;
+    font-size: 5em;
     text-align: center;
     margin-top: -20px;
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: -0px;
+    margin-right: -0px;
 }
 /* primeira paginas e tal */
 .container {
@@ -17,7 +17,7 @@ nav {
 }
 
 .play {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -35,6 +35,22 @@ nav {
 .play:hover {
   background-color: #000000;
 }
+.play:hover::before {
+  width: 100%;
+  left: 0;
+}
+.play::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 50%;
+  transition: width .4s, left .4s;
+}
+
 /* play2 */
 .play2 {
   position: absolute;
@@ -54,13 +70,28 @@ nav {
 .play2:hover {
   background-color: #000000;
 }
+.play2:hover::before {
+  width: 100%;
+  left: 0;
+}
+.play2::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 50%;
+  transition: width .4s, left .4s;
+}
 /* ---- */
 body {
     margin: 0;
     height: 100vh;
     background: #292929;
   }
-  
+
 a {
     text-decoration: none;
   }
@@ -69,7 +100,8 @@ a {
     line-height: 2;
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 50px;
+    margin-top: 30px;
   }
   
   .menu__link::before {
@@ -87,6 +119,29 @@ a {
   .menu__link:hover::before {
     width: 100%;
   }
+  
+  /* Nova classe para a seta */
+  .menu__link .arrow {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid white; /* Seta para a esquerda */
+    position: absolute;
+    left: -15px; /* Posiciona a seta inicialmente à esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.6s ease-in-out; /* Suaviza a transição */
+  }
+  
+  /* Quando o botão é hoverado, move a seta para a esquerda */
+  .menu__link:hover .arrow {
+    left: -25px; /* Move a seta mais para a esquerda */
+  }
+  
+  
   /* about */
   .botao-link {
     display: block;
