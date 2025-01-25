@@ -38,4 +38,7 @@
         background-color: #ff8c00;
         border: 1px solid black;
     }
+    .pressionada {
+        background-color: #111111;
+    }
 </style>
