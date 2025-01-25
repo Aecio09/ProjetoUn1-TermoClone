@@ -9,39 +9,33 @@ nav {
     margin-left: -8px;
     margin-right: -8px;
 }
-.play {
-    text-align: center;
-    color: aliceblue;
-    border: 2px solid black;
-    font-size: 4em;
-    left: 0px;
-    display: block;
-    margin-left: 800px;
-    margin-right: 800px;
-    margin-top: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0.2em;
-    line-height: 2;
-    position: relative;
-    background-color: #111111;
-}
-.play::before {
-content: '';
-width: 0;
-height: 2px;
-border-radius: 2px;
-background-color: #fff;
-position: absolute;
-bottom: -.25rem;
-left: 50%;
-transition: width .4s, left .4s;
+/* primeira paginas e tal */
+.container {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Altura da tela inteira */
 }
 
-.play:hover::before {
-width: 100%;
-left: 0;
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 50px 100px;
+  font-size: 25px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.play:hover {
+  background-color: #0056b3;
+}
+/* ---- */
 body {
     background-color: #292929;
 }
@@ -92,12 +86,28 @@ a {
   display: flex;
   justify-content: center;
   height: 10vh; /* Altura da tela inteira */
-  margin: 50px; /* Remove margens padrão */
+  margin: -8px; /* Remove margens padrão */
   color: aliceblue;
+  font-size: 2em;
 }
 .titulo {
   display: flex;
   justify-content: center;
   height: 10vh;
-  font-size: 2em;
+  font-size: 3em;
+}
+img {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-end; /* Alinha na parte inferior */
+}
+a img {
+  position: absolute;
+  top: 35%; /* Ajuste para a posição desejada */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Garante centralização perfeita */
+  max-width: 100%;
+  height: auto;
 }

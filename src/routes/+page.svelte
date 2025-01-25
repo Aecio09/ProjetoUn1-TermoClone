@@ -5,10 +5,11 @@
 
 <nav>LETRIX</nav>
 
-
+<div class="container">
 <a class="play" href="/Play">PLAY</a>
+</div>
 
-<a class="play" href="/About">ABOUT</a>
+<a class="play2" href="/About">ABOUT</a>
 
 <body>
     

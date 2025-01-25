@@ -4,9 +4,6 @@
 
 <nav>LETRIX</nav>
 
-<div class="titulo">
-</div>
-
 <div class="alunos">
     <ul>
         <li>Aécio Barbosa</li>
