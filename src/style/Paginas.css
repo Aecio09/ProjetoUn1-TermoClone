@@ -6,8 +6,8 @@ nav {
     font-size: 5em;
     text-align: center;
     margin-top: -20px;
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: -0px;
+    margin-right: -0px;
 }
 /* primeira paginas e tal */
 .container {
@@ -163,7 +163,7 @@ a {
   display: flex;
   justify-content: center;
   height: 10vh; /* Altura da tela inteira */
-  margin: -1px; /* Remove margens padrão */
+  margin: -0px; /* Remove margens padrão */
   color: aliceblue;
   font-size: 2em;
 }

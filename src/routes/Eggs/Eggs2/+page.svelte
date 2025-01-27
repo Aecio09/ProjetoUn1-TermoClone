@@ -97,6 +97,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 400px;
+    height: 200px;
     position: relative;
     left: 38%;
     top: 90px;
@@ -147,16 +148,16 @@ body {
     background-color: #292929;
   }
   nav {
-        background-color: #1C1C1C;
-        color: aliceblue;
-        font-weight: bold;
-        padding: 15px;
-        font-size: 3em;
-        text-align: center;
-        margin-top: -20px;
-        margin-left: -10px;
-        margin-right: -10px;
-    }
+    background-color: #111111;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 5em;
+    text-align: center;
+    margin-top: -20px;
+    margin-left: -0px;
+    margin-right: -0px;
+}
     a {
         text-decoration: none;
     }

@@ -3,8 +3,8 @@
 
     let dinoTop = 0; // Posição inicial do dinossauro (no chão)
     let isJumping = false; // Indica se o dinossauro está pulando
-    let cactusLeft = 1855; // Posição inicial do cacto
-    let stoneLeft = 1855; // Posição inicial da pedra
+    let cactusLeft = 1050; // Posição inicial do cacto
+    let stoneLeft = 1050; // Posição inicial da pedra
     let gameOver = false; // Estado do jogo
     let cactusInterval: any; // Variável para armazenar o intervalo de movimento do cacto
     let stoneInterval: any; // Variável para armazenar o intervalo de movimento da pedra
@@ -12,13 +12,14 @@
     let contador = 0; // Contador de saltos bem-sucedidos
     let cactusSpeed = 20; // Velocidade inicial do cacto
     let stoneSpeed = 20; // Velocidade inicial da pedra
+    let cactusCount = 0; // Contador de cactos para controlar a aparição da pedra
 
-    // Função para o pulo
+    // Função para o pulo 
     const jump = () => {
         if (!isJumping && !gameOver) {
             isJumping = true;
             let upInterval = setInterval(() => {
-                if (dinoTop >= 130) { // Altura máxima do salto
+                if (dinoTop >= 100) { // Altura máxima do salto
                     clearInterval(upInterval);
                     let downInterval = setInterval(() => {
                         if (dinoTop <= 0) { // Retorna ao chão
@@ -41,8 +42,15 @@
         cactusInterval = setInterval(() => {
             cactusLeft -= 5; // Move o cacto para a esquerda
             if (cactusLeft < -20) {
-                cactusLeft = 1855; // Reseta o cacto quando sai da tela
+                cactusLeft = 1000; // Reseta o cacto quando sai da tela
+                cactusCount++; // Incrementa o contador de cactos
+
+                // Controla a aparição da pedra
+                if (cactusCount % 5 === 0) {
+                    stoneLeft = 1000; // Faz a pedra reaparecer
+                }
             }
+
             // Colisão
             if (
                 cactusLeft > 0 &&
@@ -60,8 +68,9 @@
         stoneInterval = setInterval(() => {
             stoneLeft -= 5; // Move a pedra para a esquerda
             if (stoneLeft < -20) {
-                stoneLeft = 1700; // Reseta a pedra quando sai da tela
+                stoneLeft = -50; // Esconde a pedra quando sai da tela
             }
+
             // Colisão
             if (
                 stoneLeft > 0 &&
@@ -79,13 +88,14 @@
         // Reseta as variáveis para o estado inicial
         dinoTop = 0;
         isJumping = false;
-        cactusLeft = 1855;
-        stoneLeft = 1855;
+        cactusLeft = 1000;
+        stoneLeft = -50; // Pedra começa fora da tela
         gameOver = false;
         contador = 0; // Resetando o contador quando o jogo é reiniciado
         jumpCounter = 0; // Resetando o contador de pulos
         cactusSpeed = 20;
         stoneSpeed = 20;
+        cactusCount = 0; // Resetando o contador de cactos
 
         // Para os obstáculos em movimento anterior e reinicia o movimento
         clearInterval(cactusInterval);
@@ -129,6 +139,7 @@
     };
 </script>
 
+
 <nav>DINOSSAURO</nav>
 
 
@@ -159,11 +170,12 @@
 
     .game {
         position: relative; top: 20px;
-        width: 1850px;
+        width: 1000px;
         height: 200px;
         background-color: #292929;
         border: 2px solid black;
         overflow: hidden;
+        left: 25%;
     }
 
     .dino {
@@ -215,16 +227,16 @@
         margin-top: 50px;
     }
     nav {
-        background-color: #1C1C1C;
-        color: aliceblue;
-        font-weight: bold;
-        padding: 15px;
-        font-size: 3em;
-        text-align: center;
-        margin-top: -20px;
-        margin-left: -10px;
-        margin-right: -10px;
-    }
+    background-color: #111111;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 5em;
+    text-align: center;
+    margin-top: -20px;
+    margin-left: -0px;
+    margin-right: -0px;
+}
     a {
   text-decoration: none;
 }
