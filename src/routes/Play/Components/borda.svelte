@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { borda } from "../testes de codigo"
+    import { borda } from "../Store"
     import Celulas from "./celulas.svelte";
     import "../../../style/CssPlay.css"
 </script>

@@ -1,44 +1,10 @@
 <script lang="ts">
+    import "../../../style/CssPlay.css";
     export let char;
     export let keypress;
-    export let state = ""; // Estado dinâmico da tecla (e.g., "correto", "quase", "errado")
+    export let state = "";
 </script>
 
-<div class="key {state}" on:click={() => keypress(char.toUpperCase())}>
+<button type="button" class="key {state}" on:click={() => keypress(char.toUpperCase())} aria-label="{char.toUpperCase()} key">
     {char.toUpperCase()}
-</div>
-
-<style>
-    .key {
-        background-color: #111111;
-        color: whitesmoke;
-        padding: 20px 18px;
-        margin: 4px 3px;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-        border: 1px solid black;
-    }
-
-    .key:hover {
-        background-color: black;
-    }
-    
-
-    .errado {
-        background-color: #292929;
-        border: 1px solid black;
-
-    }
-    .correto {
-        background-color: #0c6834;
-        border: 1px solid black;
-    }
-    .quase {
-        background-color: #ff8c00;
-        border: 1px solid black;
-    }
-    .pressionada {
-        background-color: #111111;
-    }
-</style>
+</button>

@@ -1,10 +1,9 @@
 <script lang="ts">
-import { palavra, adv, info, cores, criarGrid, borda, fim } from "../testes de codigo";
-import { listapalavrass } from "../testes de codigo";
+import { palavra, adv, info, cores, criarGrid, borda, fim } from "../Store";
+import { listapalavrass } from "../Store";
 import "../../../style/FimDoJogo.css"
 
 function jogarnovamente() {
-
 let palavrinha : string = $listapalavrass[Math.floor(Math.random() * $listapalavrass.length)]
 palavra.set(palavrinha)
 
@@ -22,8 +21,5 @@ palavra.set(palavrinha)
 <div class="center">
     <h3>A palavra certa era: <strong>{$palavra.toUpperCase()}</strong></h3>
     <h3>Sua palavra: <strong>{$adv}</strong></h3>
-</div>
-
-<div class="center">
     <button on:click={jogarnovamente}>TENTAR DE NOVO</button>
 </div>

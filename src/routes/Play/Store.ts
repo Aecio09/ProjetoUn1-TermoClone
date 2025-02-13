@@ -1,11 +1,13 @@
 import { writable } from "svelte/store"
 
 let listapalavras = [
-    'abaco', 'batia', 'calor', 'dolar', 'elise', 'fazer', 'girar', 'haver', 'jogar',
-     'lados', 'manto', 'nuvem', 'olhos', 'poder', 'quase', 'raiar', 'saber', 'tarde', 'viver', 'lazer', 'zebra', 'caixa', 'banco', 'letra', 'norte', 'amigo', 'grupo',
-    'gente', 'navio', 'corte', 'quase', 'vazio', 'temer', 'poder', 'clima', 'jogar', 'visto',
-    'carta', 'saque', 'julho', 'aviso', 'louca', 'louco', 'olhos', 'carne', 'reais', 'homem', 'mundo',
-  ]
+    "amigo", "banco", "canto", "dardo", "estar", "falar", "gosto", "hotel", "ideia", "jogar",
+    "lugar", "mundo", "nobre", "olhar", "pular", "quase", "risco", "saber", "tocar", "unido",
+    "vazio", "zebra", "abrir", "bicho", "casar", "dizer", "etapa", "festa", "girar", "haste",
+    "lindo", "marca", "nuvem", "ostra", "pedra", "quina", "rosto", "sinal", "tigre", "ultra",
+    "velho", "xampu", "zumbi", "acaso", "bater", "corte", "danca", "ecoar", "fugir", "grito",
+    "honra", "igual", "jovem", "lutar", "mesmo", "ninar", "opcao", "ponto", "quilo", "rival",
+];
 
 
 export function criarGrid (){
@@ -17,7 +19,6 @@ export function criarGrid (){
         }
         return grid
 }
-
 export const info = writable ({
     Char: 0,
     Tentativa: 0
