@@ -136,6 +136,7 @@
     }
 
     function handleKeyboard(event: KeyboardEvent) {
+        event.stopImmediatePropagation();
         if (["ArrowLeft", "ArrowRight"].includes(event.key)) {
             HandleArrows(event);
         } else if (
