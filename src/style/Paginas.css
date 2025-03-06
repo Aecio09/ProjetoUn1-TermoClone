@@ -140,36 +140,3 @@ a {
   .menu__link:hover .arrow {
     left: -25px; /* Move a seta mais para a esquerda */
   }
-  
-  
-  /* about */
-  .botao-link {
-    display: block;
-    background-color: #292929;
-    color: #292929;
-    padding: 1px;
-    border-radius: 0px;
-    text-align: center;
-    font-size: 0.5em;
-    margin-top: 2px;
-    margin-right: 1700px;
-}
-
-.botao-link:hover {
-    background-color: #1C1C1C;
-}
-
-.alunos {
-  display: flex;
-  justify-content: center;
-  height: 10vh; /* Altura da tela inteira */
-  margin: -0px; /* Remove margens padrão */
-  color: aliceblue;
-  font-size: 2em;
-}
-a img {
-  position: absolute;
-  top: 35%; /* Ajuste para a posição desejada */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Garante centralização perfeita */
-}

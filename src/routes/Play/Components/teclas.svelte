@@ -4,6 +4,6 @@
     export let keypress;
     export let state = "";
 </script>
-<div class="key {state}" on:click={() => keypress(char.toUpperCase())}>
+<button type="button" class="key {state}" on:click={() => keypress(char.toUpperCase())} on:keydown={(e) => e.key === 'Enter' && keypress(char.toUpperCase())} aria-label="Key {char.toUpperCase()}">
     {char.toUpperCase()}
-</div>
+</button>

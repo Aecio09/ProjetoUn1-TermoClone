@@ -1,0 +1,115 @@
+
+img {
+  position: fixed; /* Fixa a imagem na tela */
+  bottom: 10; /* Fixa no fundo da tela */
+  left: 46%; /* Centraliza horizontalmente */
+  width: 150px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.center-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Usa toda a altura da tela */
+}
+
+.box {
+  width: 500px;
+  height: 450px;
+  border: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #111111;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.participantes {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.menu__link {
+    color: aliceblue;
+    line-height: 2;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    margin-top: 30px;
+  }
+  
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    left: 0;
+    transition: width .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+  }
+  
+  /* Nova classe para a seta */
+  .menu__link .arrow {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid white; /* Seta para a esquerda */
+    position: absolute;
+    left: -15px; /* Posiciona a seta inicialmente à esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.6s ease-in-out; /* Suaviza a transição */
+  }
+  
+  /* Quando o botão é hoverado, move a seta para a esquerda */
+  .menu__link:hover .arrow {
+    left: -25px; /* Move a seta mais para a esquerda */
+  }
+  
+  
+  /* about */
+  .botao-link {
+    display: block;
+    background-color: #292929;
+    color: #292929;
+    padding: 1px;
+    border-radius: 0px;
+    text-align: center;
+    font-size: 0.5em;
+    margin-top: 2px;
+    margin-right: 1700px;
+}
+
+.botao-link:hover {
+    background-color: #1C1C1C;
+}
+
+nav {
+    background-color: #111111;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 5em;
+    text-align: center;
+    margin-top: -20px;
+    margin-left: -0px;
+    margin-right: -0px;
+}
+body {
+    background-color: #292929;
+  }

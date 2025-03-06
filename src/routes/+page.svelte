@@ -2,9 +2,6 @@
   import "../style/Paginas.css"
 </script>
 
-<body>
-
-</body>
 <nav>LETRIX</nav>
 
 <div class="container">

@@ -1,22 +1,26 @@
 <script lang="ts">
-    import "../../style/Paginas.css"
-</script>
+    import "../../style/cssAbout.css";
 
+    let texto = "No projeto, a IA foi utilizada em vários aspectos, como na resolução de bugs e na criação de funções para o jogo. Um exemplo disso foi quando tivemeos um problema ao verificar se o jogador poderia apertar Enter. Com a ajuda da IA, esse problema foi resolvido facilmente.";
+    let participantes = ["Aécio Barbosa", "Arthur Pontes", "João Henrique", "Matheus Silva","Cristiano Caldas"];
+</script>
 <nav>LETRIX</nav>
 
-<div class="alunos">
-    <ul>
-        <li>Aécio Barbosa</li>
-        <li>Arthur Pontes</li> 
-        <li>João Henrique</li> 
-        <li>Matheus Silva</li> 
-        <li>Cristiano Caldas</li>
-    </ul>
+<div class="center-box-container">
+<div class="box">
+    <h2>Uso da IA</h2>
+    <h3>{texto}</h3>
+    <div class="participantes">
+      <h3>Participantes</h3>
+      <ul>
+        {#each participantes as nome}
+          <li>{nome}</li>
+        {/each}
+      </ul>
+    </div>
+  </div>
 </div>
-
-<a href="/Eggs">
-    <img src="ifpe.png" alt=""/>
-</a>
+<img src="ifpe_logo.png" alt="">
 
 <a class="botao-link" href="Eggs/Eggs2">Ir para Eggs2</a>
 
